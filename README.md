@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Turbo 8 morphing refreshes on Rails
 
-Things you may want to cover:
+Turbo 8 morphing support for morphing page refreshes and scroll position preservation, powered by idiomorph and the ability to broadcast page refreshes with a new Turbo Stream action.
+https://www.colby.so/posts/turbo-8-morphing-refreshes-on-rails
 
-* Ruby version
 
-* System dependencies
+* Ruby version:\
+  Ruby 3.3.0
 
-* Configuration
+* Rails version:\
+  Rails >= 7.1.3.2
 
-* Database creation
+* System dependencies:\
+  Bundler (I used version 2.5.x)
 
-* Database initialization
+* Database creation:\
+  Run `bin/rails db:create`\
+  Run `bin/rails db:migrate`
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these steps.
 
-* Deployment instructions
+- Change to the desired directory then run the following:
 
-* ...
+  - Git clone the project
+  - cd refreshable-blog/
+  - run `rails db:create`
+
+### Running the Application Locally
+
+ \_Steps to execute the app locally_
+
+> Run `bin/dev` in the console in the working directory
+
+Navigate to localhost:3000/
+
+## Acknowledgements
+
+[Turbo 8 morphing refreshes on Rails](https://www.colby.so/posts/turbo-8-morphing-refreshes-on-rails) by David Colby
+Github [repo](https://github.com/DavidColby/turbo-refreshes-on-rails)
