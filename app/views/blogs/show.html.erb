@@ -12,7 +12,8 @@
 </div>
 <div class="mx-auto md:w-2/3 w-full">
   <h2>Blog posts</h2>
-  <div id="posts">
+  <%= turbo_stream_from @blog %>
+  <div>
     <% @blog.posts.each do |post| %>
       <%= render "posts/post", post: post %>
     <% end %>
