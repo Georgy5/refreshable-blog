@@ -33,6 +33,8 @@ To get a local copy up and running follow these steps.
 
  \_Steps to execute the app locally_
 
+Don't forget to check that Redis is running!
+> Run `redis-server` in the console
 > Run `bin/dev` in the console in the working directory
 
 Navigate to localhost:3000/
