@@ -1,14 +1,13 @@
 class PostsController < ApplicationController
   def create
+    @blog = Blog.find(params[:blog_id])
     @post = Post.new(post_params)
-    @post.blog_id = params[:blog_id]
+    @post.blog = @blog
 
-    respond_to do |format|
-      if @post.save
-        format.turbo_stream
-      else
-        format.turbo_stream { render turbo_stream: turbo_stream.replace('post_form', partial: 'posts/form') }
-      end
+    if @post.save
+      redirect_to @blog
+    else
+      render 'blogs/show', status: :unprocessable_entity
     end
   end
 
